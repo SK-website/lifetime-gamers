@@ -1,6 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
+import playlistSlice from './reducers/playlist-reducer';
 
 const store = configureStore({
-  reducer: {},
+  reducer: {
+    playlist: playlistSlice,
+  },
 });
 export default store;

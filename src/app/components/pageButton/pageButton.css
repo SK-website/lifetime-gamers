@@ -1,0 +1,6 @@
+.page-control-btn {
+  padding: 1.2rem, 1.6rem;
+  background-color: var(--button-bg-color3);
+  background: #08a0f7;
+  border-radius: 8px;
+}

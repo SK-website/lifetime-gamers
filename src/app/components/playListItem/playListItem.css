@@ -1,0 +1,39 @@
+.list-item {
+  max-width: 114.6rem;
+  height: 5.8rem;
+  margin-bottom: 1.3rem;
+  padding: 0 3rem 0 2.4rem;
+  justify-content: space-between;
+  background: var(--list-bg-color);
+  border: 1px solid #d8e1e9;
+  border-radius: 10px;
+}
+
+.box {
+  width: 24px;
+  height: 24px;
+  margin-right: 4.4rem;
+  background: rgba(8, 160, 247, 0.06);
+  border: 1px solid #08a0f7;
+  border-radius: 3px;
+}
+
+.item-name {
+  justify-content: flex-start;
+}
+.item-status {
+  min-width: 16rem;
+  justify-content: space-between;
+}
+
+.game-name {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+.item-btn {
+  padding: 0.2rem 1rem;
+}

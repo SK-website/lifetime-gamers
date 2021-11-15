@@ -1,0 +1,28 @@
+.header-container {
+  width: 100%;
+  background-color: var(--list-bg-color);
+}
+.header-wrapper {
+  height: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  color: var(--button-bg-color3);
+}
+
+.nav-item {
+  margin-right: 2rem;
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: crimson;
+}

@@ -5,10 +5,11 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:import/recommended",
+    "plugin:jsx-a11y/recommended",
     "airbnb",
     "prettier"
   ],
@@ -25,6 +26,7 @@
     "no-console": "warn",
     "no-unused-vars": "warn",
     "max-len": ["warn", { "code": 120 }],
+    "react/prop-types": "off",
     // "react/react-in-jsx-scope": "off",
     // "jsx-a11y/no-onchange": "off",
     // "jsx-a11y/label-has-associated-control": "off",
