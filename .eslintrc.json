@@ -1,0 +1,35 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    "plugin:import/recommended",
+    "airbnb",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "no-console": "warn",
+    "no-unused-vars": "warn",
+    "max-len": ["warn", { "code": 120 }],
+    // "react/react-in-jsx-scope": "off",
+    // "jsx-a11y/no-onchange": "off",
+    // "jsx-a11y/label-has-associated-control": "off",
+    "no-param-reassign": ["error", { "props": false }],
+    // "array-callback-return": "off",
+    "no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }]
+  }
+}
