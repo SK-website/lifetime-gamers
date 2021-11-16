@@ -1,15 +1,16 @@
+/* eslint-disable react/require-default-props */
 import React from 'react';
 import './pageButton.css';
 import PropTypes from 'prop-types';
 
-const PageButton = ({ buttonText }) => (
-  <button type="button" className="page-control-btn">
+const PageButton = ({ buttonText, classname }) => (
+  <button type="button" className={`${classname} page-control-btn`}>
     {buttonText}
   </button>
 );
 
 PageButton.propTypes = {
-  // eslint-disable-next-line react/require-default-props
   buttonText: PropTypes.string,
+  classname: PropTypes.string,
 };
 export default PageButton;

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import getData from '../../api/api';
 import { setPlaylistAction } from '../../store/reducers/playlist-reducer';
 import NewGame from '../addNewGame/AddNewGame';
+import PageControls from '../page-controls/PageControls';
 import PlayListItem from '../playListItem/PlayListItem';
 import './gamesList.css';
 
@@ -12,7 +13,10 @@ const GamesList = () => {
 
   useEffect(() => {
     const data = getData();
-    data.then((res) => dispatch(setPlaylistAction(res)));
+    data.then((res) => {
+      // toJS(res);
+      dispatch(setPlaylistAction(res));
+    });
   }, []);
 
   return (
@@ -25,10 +29,13 @@ const GamesList = () => {
               <p>Game title</p>
               <p>Status</p>
             </div>
-            {games ? games.map((el) => <PlayListItem key={el.id} title={el.title} completed={el.completed} />) : null}
             <NewGame />
+            {games
+              ? games.map((el) => <PlayListItem key={el.id} id={el.id} title={el.title} completed={el.completed} />)
+              : null}
           </div>
         </div>
+        <PageControls />
       </div>
     </div>
   );

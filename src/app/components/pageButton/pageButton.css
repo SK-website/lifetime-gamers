@@ -1,6 +1,19 @@
 .page-control-btn {
+  height: 43px;
+  margin-left: 2.4rem;
   padding: 1.2rem, 1.6rem;
-  background-color: var(--button-bg-color3);
-  background: #08a0f7;
   border-radius: 8px;
+  border: transparent;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  background-color: var(--button-bg-color3);
+  color: var(--font-color-4);
+  font-weight: 600;
+}
+.text {
+  width: 122px;
+}
+
+.arrow-btn {
+  width: 49px;
 }

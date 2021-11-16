@@ -1,0 +1,29 @@
+.list-item.new-item {
+  background-color: var(--main-bg-color);
+  justify-content: flex-start;
+}
+
+.plus {
+  width: 24px;
+  height: 24px;
+  margin-right: 4.4rem;
+  border: transparent;
+  background: url('../../../assets/icons/Plus.svg') no-repeat center;
+}
+
+.new-item-input {
+  width: 414px;
+  height: 40px;
+  background: #ffffff;
+  box-shadow: 0px 30px 60px rgba(32, 56, 85, 0.15);
+  border: 1px solid var(--button-bg-color3);
+  border-radius: 10px;
+  font-size: 13px;
+  /* line-height: 16px; */
+}
+
+.info {
+  font: 'Roboto';
+  font-size: 1.2rem;
+  color: var(---font-color-3);
+}

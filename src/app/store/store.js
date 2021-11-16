@@ -7,3 +7,5 @@ const store = configureStore({
   },
 });
 export default store;
+
+export const playlistState = (state) => state.playlist;

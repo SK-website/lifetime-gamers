@@ -1,0 +1,11 @@
+.page-controls-container {
+  margin: 0 auto;
+  width: 100;
+  padding: 7.8rem 0 7.8rem;
+}
+
+.current-page-control {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  color: rgba(38, 51, 74, 0.6);
+}

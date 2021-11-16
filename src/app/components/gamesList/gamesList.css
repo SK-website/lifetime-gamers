@@ -4,14 +4,15 @@
 }
 
 .playlist-container {
-  margin: 0 auto;
-  max-width: 130.9rem;
-  height: 100vh;
+  margin-top: 6.6rem;
 }
 
 .playlist-items-container {
   box-shadow: 0px 30px 60px rgba(32, 56, 85, 0.15);
   background-color: var(--list-bg-color);
+  margin-top: 2.4rem;
+  padding-bottom: 3.6rem;
+  border-radius: 10px;
 }
 
 .playlist-items-wrapper {
