@@ -7,5 +7,6 @@
 .current-page-control {
   font-size: 1.3rem;
   line-height: 1.5rem;
+  font-family: 'Roboto', sans-serif;
   color: rgba(38, 51, 74, 0.6);
 }

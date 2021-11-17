@@ -23,7 +23,7 @@
 }
 
 .info {
-  font: 'Roboto';
+  font-family: 'Mulish', sans-serif;
   font-size: 1.2rem;
   color: var(---font-color-3);
 }

@@ -25,7 +25,7 @@ const playlistSlice = createSlice({
 
       state.games = state.games.filter((el) => el.id !== id.payload);
       console.log(state.games);
-      // state.gameToDeleteId.length = 0;
+      state.gameToDeleteId.length = 0;
       state.showDeleteModal = false;
     },
     addNewGameAction: (state, newItem) => {

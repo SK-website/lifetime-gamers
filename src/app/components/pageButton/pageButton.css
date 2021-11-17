@@ -4,11 +4,13 @@
   padding: 1.2rem, 1.6rem;
   border-radius: 8px;
   border: transparent;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
-  line-height: 1.9rem;
-  background-color: var(--button-bg-color3);
-  color: var(--font-color-4);
   font-weight: 600;
+  line-height: 1.9rem;
+  color: var(--font-color-4);
+  background-color: var(--button-bg-color3);
+  cursor: pointer;
 }
 
 .page-control-btn:hover {

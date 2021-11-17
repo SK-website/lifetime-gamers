@@ -28,13 +28,13 @@ const GamesList = () => {
 
   return (
     <div className="container">
-      <div className="playlist-container">
+      <div className="row-lex playlist-container">
         <div className="title">Community playlist</div>
         <div className="playlist-items-container">
           <div className="playlist-items-wrapper">
             <div className="row-flex playlist-header">
-              <p>Game title</p>
-              <p>Status</p>
+              <p className="subtitle">Game title</p>
+              <p className="status">Status</p>
             </div>
             <NewGame />
             {games
@@ -50,3 +50,10 @@ const GamesList = () => {
   );
 };
 export default GamesList;
+
+<div className="row-flex list-item">
+  <div className="row-flex item-name">
+    <div className="game-name">TTTTT</div>
+  </div>
+  <div className="row-flex item-status">Status</div>
+</div>;

@@ -7,7 +7,7 @@ import './addNewGame.css';
 const NewGame = () => {
   const dispatch = useDispatch();
   const { showNewGameInput } = useSelector(playlistState);
-  const [newItemName, setNewItemName] = useState();
+  const [newItemName, setNewItemName] = useState('');
 
   const handelAddNewFieldClick = (e) => {
     e.stopPropagation();
@@ -19,7 +19,7 @@ const NewGame = () => {
   };
 
   const addNewItem = () => {
-    if (showNewGameInput && newItemName.length > 3) {
+    if (showNewGameInput && newItemName.length > 2) {
       dispatch(showNewGameInputAction(false));
       dispatch(
         addNewGameAction({
@@ -28,6 +28,9 @@ const NewGame = () => {
           completed: false,
         })
       );
+      setNewItemName('');
+    } else {
+      dispatch(showNewGameInputAction(false));
       setNewItemName('');
     }
   };
@@ -57,13 +60,13 @@ const NewGame = () => {
             type="text"
             className="new-item-input"
             maxLength="70"
-            placeholder="Type game title"
+            placeholder="Type game title (3 characters at least)"
             value={newItemName}
             onChange={handelNewItemChange}
             onKeyPress={handelAddGameBtnEnter}
           />
         ) : (
-          <span className="info">Click here to add a new game</span>
+          <span className="info">Click here to add a new game </span>
         )}
       </div>
     </div>

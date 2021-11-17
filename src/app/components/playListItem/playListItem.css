@@ -20,6 +20,7 @@
 
 .item-name {
   justify-content: flex-start;
+  font-family: 'Mulish', sans-serif;
 }
 .item-status {
   min-width: 14.8rem;
@@ -41,6 +42,7 @@
   font-size: 1.2rem;
   font-weight: 700;
   transition: transform 0.3s ease-in-out;
+  font-family: 'Roboto', sans-serif;
   cursor: pointer;
 }
 
