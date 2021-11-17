@@ -14,7 +14,7 @@ const DeleteModal = () => {
     <div className="fixed-overlay" style={showDeleteModal ? { top: '0' } : null}>
       <div className="modal">
         <div className="modal-content">
-          <button type="button" className="btn-close" aria-label="Close" />
+          <button type="button" className="btn-close" aria-label="Close" onClick={handelCancelButtonClick} />
           <p className="modal-text">Are you sure you want to delete this item?</p>
           <div className="row-flex modal-footer">
             <button type="button" className="btn btn-delete" onClick={handelDeletelButtonClick}>
