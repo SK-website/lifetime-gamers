@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import getData from '../../api/api';
+import PAGE_SIZE from '../../consts';
 import { setPlaylistAction } from '../../store/reducers/playlist-reducer';
+import { paginationState, playlistState } from '../../store/store';
 import NewGame from '../addNewGame/AddNewGame';
 import PageControls from '../page-controls/PageControls';
 import PlayListItem from '../playListItem/PlayListItem';
@@ -9,12 +11,19 @@ import './gamesList.css';
 
 const GamesList = () => {
   const dispatch = useDispatch();
-  const { games } = useSelector((state) => state.playlist);
+  const { games } = useSelector(playlistState);
+  const { pageNumber } = useSelector(paginationState);
+  const indexesToShow = (page) => {
+    const firstInd = page * PAGE_SIZE;
+    const lastInd = Math.min(games.length - 1, firstInd + PAGE_SIZE);
+    return games.slice(firstInd, lastInd + 1);
+  };
+
+  console.log(indexesToShow(pageNumber));
 
   useEffect(() => {
     const data = getData();
     data.then((res) => {
-      // toJS(res);
       dispatch(setPlaylistAction(res));
     });
   }, []);
@@ -31,7 +40,9 @@ const GamesList = () => {
             </div>
             <NewGame />
             {games
-              ? games.map((el) => <PlayListItem key={el.id} id={el.id} title={el.title} completed={el.completed} />)
+              ? indexesToShow(pageNumber).map((el) => (
+                  <PlayListItem key={el.id} id={el.id} title={el.title} completed={el.completed} />
+                ))
               : null}
           </div>
         </div>

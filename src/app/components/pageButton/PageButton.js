@@ -3,8 +3,8 @@ import React from 'react';
 import './pageButton.css';
 import PropTypes from 'prop-types';
 
-const PageButton = ({ buttonText, classname }) => (
-  <button type="button" className={`${classname} page-control-btn`}>
+const PageButton = ({ buttonText, classname, cb }) => (
+  <button type="button" className={`${classname} page-control-btn`} onClick={cb}>
     {buttonText}
   </button>
 );
@@ -12,5 +12,6 @@ const PageButton = ({ buttonText, classname }) => (
 PageButton.propTypes = {
   buttonText: PropTypes.string,
   classname: PropTypes.string,
+  cb: PropTypes.func,
 };
 export default PageButton;
