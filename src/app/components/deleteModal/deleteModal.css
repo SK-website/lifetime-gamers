@@ -1,0 +1,65 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  width: 30.6rem;
+  height: 23.8rem;
+  padding: 15px;
+  background: #ffffff;
+  box-shadow: 0px 30px 60px rgba(32, 56, 85, 0.15);
+  border-radius: 8px;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.modal-text {
+  width: 20.17rem;
+  margin-top: 4rem;
+  align-self: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+}
+.btn-close {
+  width: 17px;
+  height: 17px;
+  border: transparent;
+  background: url('../../../assets/icons/close_small.svg') no-repeat center;
+}
+.modal-footer {
+  width: 21.7rem;
+  margin-top: 4.8rem;
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  height: 43px;
+  border-color: transparent;
+  border-radius: 8px;
+  color: var(--font-color-4);
+  font-weight: 600;
+}
+
+.btn-cansel {
+  width: 82px;
+  background-color: var(--button-bg-color3);
+}
+
+.btn-cansel:hover {
+  background-color: #057bbe;
+}
+
+.btn-delete {
+  width: 111px;
+  background-color: #ba3409;
+}
+
+.btn-delete:hover {
+  background-color: #972c08;
+}

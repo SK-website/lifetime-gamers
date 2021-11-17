@@ -22,7 +22,6 @@ function PageControls() {
   const hendelPrevPageClick = () => pageNumber > 0 && dispatch(decrementPageAction());
 
   const hendelNextPageClick = (e) => {
-    // e.preventDefault();
     const numberOfLastPage = pagesAmount(games) - 1;
     pageNumber < numberOfLastPage && dispatch(incrementPageAction());
   };

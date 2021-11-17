@@ -8,6 +8,7 @@ const playlistSlice = createSlice({
     showEditTitleInput: [],
     showNewGameInput: false,
     isDisabled: false,
+    showDeleteModal: false,
   },
   reducers: {
     setPlaylistAction: (state, dataFromServer) => {
@@ -40,6 +41,9 @@ const playlistSlice = createSlice({
       state.isDisabled = false;
       state.showEditTitleInput.length = 0;
     },
+    showDeleteModalAction: (state, isShown) => {
+      state.showDeleteModal = isShown;
+    },
   },
 });
 
@@ -53,4 +57,5 @@ export const {
   showNewGameInputAction,
   showEditTitleAction,
   setEditedTitleAction,
+  showDeleteModalAction,
 } = playlistSlice.actions;

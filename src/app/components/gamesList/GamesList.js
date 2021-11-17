@@ -5,6 +5,7 @@ import PAGE_SIZE from '../../consts';
 import { setPlaylistAction } from '../../store/reducers/playlist-reducer';
 import { paginationState, playlistState } from '../../store/store';
 import NewGame from '../addNewGame/AddNewGame';
+import DeleteModal from '../deleteModal/DeleteModal';
 import PageControls from '../page-controls/PageControls';
 import PlayListItem from '../playListItem/PlayListItem';
 import './gamesList.css';
