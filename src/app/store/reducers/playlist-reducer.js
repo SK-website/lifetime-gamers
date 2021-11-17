@@ -21,10 +21,7 @@ const playlistSlice = createSlice({
       });
     },
     deleteGameAction: (state, id) => {
-      console.log(id.payload);
-
       state.games = state.games.filter((el) => el.id !== id.payload);
-      console.log(state.games);
       state.gameToDeleteId.length = 0;
       state.showDeleteModal = false;
     },
@@ -71,7 +68,6 @@ export const {
   showNewGameInputAction,
   showEditTitleAction,
   setEditedTitleAction,
-  // showDeleteModalAction,
   addGameToDeleteIdAction,
   clearGameToDeleteIdAction,
 } = playlistSlice.actions;

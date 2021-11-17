@@ -28,6 +28,9 @@ const PlayListItem = ({ title, completed, id }) => {
     if (!isDisabled) dispatch(showEditTitleAction(id));
   };
   const handelEditInputSubmit = (e) => {
+    if (editedItemName.length < 3) {
+      return;
+    }
     if (e.code === 'Enter') {
       dispatch(
         setEditedTitleAction({
@@ -35,7 +38,6 @@ const PlayListItem = ({ title, completed, id }) => {
           newTitle: editedItemName,
         })
       );
-      setEditedItemName('');
     }
   };
 

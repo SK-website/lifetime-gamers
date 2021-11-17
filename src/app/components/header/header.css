@@ -10,10 +10,9 @@
   align-items: center;
 }
 .logo {
-  font-size: 4rem;
-  font-weight: 900;
-  letter-spacing: 0.5rem;
-  color: var(--button-bg-color3);
+  width: 168px;
+  height: 32px;
+  background: url('../../../assets/icons/Playlist.svg') no-repeat center;
 }
 
 .nav-item {

@@ -4,7 +4,7 @@ import './header.css';
 const Header = () => (
   <div className="header-container">
     <div className="container header-wrapper">
-      <div className="logo">Playlist</div>
+      <div className="logo" />
       <ul className="row-flex nav-list">
         <li className="nav-item nav-bell" />
         <li className="nav-item nav-settings" />

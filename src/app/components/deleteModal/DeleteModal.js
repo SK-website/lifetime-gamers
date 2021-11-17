@@ -1,5 +1,4 @@
-/* eslint-disable react/require-default-props */
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { playlistState } from '../../store/store';
 import './deleteModal.css';
@@ -31,8 +30,4 @@ const DeleteModal = () => {
   );
 };
 
-// DeleteModal.propTypes = {
-//   id: PropTypes.number,
-//   title: PropTypes.string,
-// };
 export default DeleteModal;
