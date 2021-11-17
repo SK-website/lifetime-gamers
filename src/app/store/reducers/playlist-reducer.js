@@ -9,6 +9,7 @@ const playlistSlice = createSlice({
     showNewGameInput: false,
     isDisabled: false,
     showDeleteModal: false,
+    gameToDeleteId: [],
   },
   reducers: {
     setPlaylistAction: (state, dataFromServer) => {
@@ -20,7 +21,12 @@ const playlistSlice = createSlice({
       });
     },
     deleteGameAction: (state, id) => {
+      console.log(id.payload);
+
       state.games = state.games.filter((el) => el.id !== id.payload);
+      console.log(state.games);
+      // state.gameToDeleteId.length = 0;
+      state.showDeleteModal = false;
     },
     addNewGameAction: (state, newItem) => {
       state.games.unshift(newItem.payload);
@@ -44,6 +50,14 @@ const playlistSlice = createSlice({
     showDeleteModalAction: (state, isShown) => {
       state.showDeleteModal = isShown;
     },
+    addGameToDeleteIdAction: (state, id) => {
+      state.gameToDeleteId.push(id.payload);
+      state.showDeleteModal = true;
+    },
+    clearGameToDeleteIdAction: (state) => {
+      state.gameToDeleteId.length = 0;
+      state.showDeleteModal = false;
+    },
   },
 });
 
@@ -57,5 +71,7 @@ export const {
   showNewGameInputAction,
   showEditTitleAction,
   setEditedTitleAction,
-  showDeleteModalAction,
+  // showDeleteModalAction,
+  addGameToDeleteIdAction,
+  clearGameToDeleteIdAction,
 } = playlistSlice.actions;

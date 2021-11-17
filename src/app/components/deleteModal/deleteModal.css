@@ -1,19 +1,29 @@
+.fixed-overlay {
+  position: fixed;
+  top: -2000px;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background: rgba(33%, 33%, 33%, 0.5);
+  transition: top 0.7s ease-out;
+  z-index: 3;
+}
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 40%;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 30vh;
   width: 30.6rem;
   height: 23.8rem;
-  padding: 15px;
-  background: #ffffff;
+  background: var(--list-bg-color);
   box-shadow: 0px 30px 60px rgba(32, 56, 85, 0.15);
   border-radius: 8px;
 }
 
 .modal-content {
+  width: 30.6rem;
+  height: 23.8rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
 }
 
 .modal-text {
@@ -27,8 +37,12 @@
 .btn-close {
   width: 17px;
   height: 17px;
+  margin-top: 15px;
+  margin-right: 15px;
+  align-self: flex-end;
   border: transparent;
   background: url('../../../assets/icons/close_small.svg') no-repeat center;
+  cursor: pointer;
 }
 .modal-footer {
   width: 21.7rem;
@@ -44,6 +58,7 @@
   border-radius: 8px;
   color: var(--font-color-4);
   font-weight: 600;
+  cursor: pointer;
 }
 
 .btn-cansel {

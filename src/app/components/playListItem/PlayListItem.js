@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { playlistState } from '../../store/store';
 import {
+  addGameToDeleteIdAction,
   changeStatusAction,
-  deleteGameAction,
   setEditedTitleAction,
   showEditTitleAction,
 } from '../../store/reducers/playlist-reducer';
@@ -22,7 +22,7 @@ const PlayListItem = ({ title, completed, id }) => {
   };
 
   const handelDeleteGameBtnClick = () => {
-    dispatch(deleteGameAction(id));
+    dispatch(addGameToDeleteIdAction(id));
   };
   const handelTitleClick = () => {
     if (!isDisabled) dispatch(showEditTitleAction(id));
