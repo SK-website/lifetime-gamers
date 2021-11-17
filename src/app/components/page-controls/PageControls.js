@@ -31,8 +31,8 @@ function PageControls() {
       <div className="current-page-control">{`${pageNumber + 1} of ${pagesAmount(games)} pages`}</div>
       <div className="row-flex">
         <PageButton classname="arrow-btn" buttonText="<<" cb={hendelFirstPageClick} />
-        <PageButton classname="text" buttonText="<< Prev page" cb={hendelPrevPageClick} />
-        <PageButton classname="text" buttonText="Next page >>" cb={hendelNextPageClick} />
+        <PageButton classname="text" buttonText="< Prev page" cb={hendelPrevPageClick} />
+        <PageButton classname="text" buttonText="Next page >" cb={hendelNextPageClick} />
         <PageButton classname="arrow-btn" buttonText=">>" cb={hendelLastPageClick} />
       </div>
     </div>
