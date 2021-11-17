@@ -15,11 +15,9 @@ const GamesList = () => {
   const { pageNumber } = useSelector(paginationState);
   const indexesToShow = (page) => {
     const firstInd = page * PAGE_SIZE;
-    const lastInd = Math.min(games.length - 1, firstInd + PAGE_SIZE);
+    const lastInd = Math.min(games.length - 1, firstInd + PAGE_SIZE - 1);
     return games.slice(firstInd, lastInd + 1);
   };
-
-  console.log(indexesToShow(pageNumber));
 
   useEffect(() => {
     const data = getData();
